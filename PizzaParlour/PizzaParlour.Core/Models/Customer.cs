@@ -1,7 +1,10 @@
-﻿namespace PizzaParlour.Core.Models
+﻿using Newtonsoft.Json;
+
+namespace PizzaParlour.Core.Models
 {
     public class Customer
     {
+        [JsonProperty("id")]
         public string CustomerId { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
