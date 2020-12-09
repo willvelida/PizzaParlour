@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.Core", "PizzaP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.CustomerManager.API", "PizzaParlour.CustomerManager.API\PizzaParlour.CustomerManager.API.csproj", "{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.CustomerManager.Aggregate", "PizzaParlour.CustomerManager.Aggregate\PizzaParlour.CustomerManager.Aggregate.csproj", "{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
