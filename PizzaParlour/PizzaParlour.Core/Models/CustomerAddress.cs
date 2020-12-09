@@ -1,4 +1,4 @@
-﻿namespace PizzaParlour.Core
+﻿namespace PizzaParlour.Core.Models
 {
     public class CustomerAddress
     {
