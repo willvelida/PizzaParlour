@@ -34,6 +34,7 @@ namespace PizzaParlour.CustomerManager.API
 
             builder.Services.AddSingleton((s) => new CosmosClient(config["CosmosDBConnectionString"], cosmosClientOptions));
             builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
+            builder.Services.AddSingleton<ICustomerAggregateRepository, CustomerAggregateRepository>();
         }
     }
 }

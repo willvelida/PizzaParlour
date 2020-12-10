@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.Core", "PizzaParlour.Core\PizzaParlour.Core.csproj", "{071A0805-5CC7-4A3B-94B8-8042AE032C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaParlour.Core", "PizzaParlour.Core\PizzaParlour.Core.csproj", "{071A0805-5CC7-4A3B-94B8-8042AE032C4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.CustomerManager.API", "PizzaParlour.CustomerManager.API\PizzaParlour.CustomerManager.API.csproj", "{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaParlour.CustomerManager.API", "PizzaParlour.CustomerManager.API\PizzaParlour.CustomerManager.API.csproj", "{1B743B7F-3DC3-41FC-B813-D17E1C7F49E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaParlour.CustomerManager.Aggregate", "PizzaParlour.CustomerManager.Aggregate\PizzaParlour.CustomerManager.Aggregate.csproj", "{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaParlour.CustomerManager.Aggregate", "PizzaParlour.CustomerManager.Aggregate\PizzaParlour.CustomerManager.Aggregate.csproj", "{BD2AE8C5-5BC9-47E9-88CE-75AE4662643F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
