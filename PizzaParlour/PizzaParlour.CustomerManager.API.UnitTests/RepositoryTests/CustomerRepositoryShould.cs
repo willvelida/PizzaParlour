@@ -4,9 +4,6 @@ using Moq;
 using PizzaParlour.Core.Models;
 using PizzaParlour.CustomerManager.API.Repositories;
 using PizzaParlour.CustomerManager.API.UnitTests.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -36,7 +33,7 @@ namespace PizzaParlour.CustomerManager.API.UnitTests.RepositoryTests
         }
 
         [Fact]
-        public async Task AddCustomerSuccessfully()
+        public async Task FireCreateItemAsyncSuccessfully()
         {
             // Arrange
             var testCustomer = TestDataGenerator.GenerateCustomer();

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -23,10 +23,6 @@
   <ItemGroup>
     <ProjectReference Include="..\PizzaParlour.Core\PizzaParlour.Core.csproj" />
     <ProjectReference Include="..\PizzaParlour.CustomerManager.API\PizzaParlour.CustomerManager.API.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="FunctionTests\" />
   </ItemGroup>
 
 </Project>

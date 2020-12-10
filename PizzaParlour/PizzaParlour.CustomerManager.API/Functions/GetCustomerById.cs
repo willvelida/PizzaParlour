@@ -39,9 +39,11 @@ namespace PizzaParlour.CustomerManager.API.Functions
                     _logger.LogError($"Customer Id is not specified");
                     result = new StatusCodeResult(StatusCodes.Status400BadRequest);
                 }
-
-                var customer = await _customerAggregateRepository.GetCustomerById(id);
-                result = new OkObjectResult(customer);
+                else
+                {
+                    var customer = await _customerAggregateRepository.GetCustomerById(id);
+                    result = new OkObjectResult(customer);
+                }              
             }
             catch (CosmosException cx) when (cx.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
