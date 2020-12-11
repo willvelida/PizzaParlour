@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using PizzaParlour.Core.Models;
@@ -32,7 +30,7 @@ namespace PizzaParlour.CustomerManager.Aggregate.Functions
             ConnectionStringSetting = "CosmosDBConnectionString",
             LeaseCollectionName = "leases",
             CreateLeaseCollectionIfNotExists = true,
-            LeaseCollectionPrefix = "Customers")]IReadOnlyList<Document> input, ILogger log)
+            LeaseCollectionPrefix = "Customers")]IReadOnlyList<Document> input)
         {
             try
             {
