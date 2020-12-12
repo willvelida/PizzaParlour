@@ -14,7 +14,7 @@ namespace PizzaParlour.CustomerManager.API.UnitTests.Helpers
                 Email = "will@test.com",
                 Password = "SomePassword",
                 PhoneNumber = "0800111222",
-                Address = new CustomerAddress()
+                Address = new Address()
                 {
                     AddressLine1 = "Address Line 1",
                     AddressLine2 = "Address Line 2",

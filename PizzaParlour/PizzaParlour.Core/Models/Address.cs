@@ -1,6 +1,6 @@
 ﻿namespace PizzaParlour.Core.Models
 {
-    public class CustomerAddress
+    public class Address
     {
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
