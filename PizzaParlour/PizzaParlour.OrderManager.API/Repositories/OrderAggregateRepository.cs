@@ -1,9 +1,7 @@
 ﻿using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 using PizzaParlour.Core.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PizzaParlour.OrderManager.API.Repositories
@@ -22,6 +20,19 @@ namespace PizzaParlour.OrderManager.API.Repositories
             _config = config;
 
             _orderAggregateContainer = _cosmosClient.GetContainer(_config["DatabaseName"], _config["OrderAggregateContainer"]);
+        }
+
+        public async Task DeleteOrder(string customerId, string orderId)
+        {
+            ItemRequestOptions itemRequestOptions = new ItemRequestOptions
+            {
+                EnableContentResponseOnWrite = false
+            };
+
+            await _orderAggregateContainer.DeleteItemAsync<Order>(
+                orderId,
+                new PartitionKey(customerId),
+                itemRequestOptions);
         }
 
         public async Task<List<Order>> GetAllOrdersByCustomerId(string customerId)

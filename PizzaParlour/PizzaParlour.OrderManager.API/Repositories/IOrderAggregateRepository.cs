@@ -19,5 +19,13 @@ namespace PizzaParlour.OrderManager.API.Repositories
         /// <param name="customerId"></param>
         /// <returns></returns>
         Task<List<Order>> GetAllOrdersByCustomerId(string customerId);
+
+        /// <summary>
+        /// Deletes an order for a customer from the OrderAggregate collection
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        Task DeleteOrder(string customerId, string orderId);
     }
 }
