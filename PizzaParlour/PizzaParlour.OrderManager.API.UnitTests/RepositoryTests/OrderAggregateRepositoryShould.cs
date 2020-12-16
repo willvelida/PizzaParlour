@@ -79,5 +79,15 @@ namespace PizzaParlour.OrderManager.API.UnitTests.RepositoryTests
 
             // Assert
         }
+
+        [Fact]
+        public async Task FireDeleteItemAsync()
+        {
+            // Arrange
+
+            // Act
+
+            // Assert
+        }
     }
 }
