@@ -74,20 +74,40 @@ namespace PizzaParlour.OrderManager.API.UnitTests.RepositoryTests
         public async Task FireGetItemQueryIterator()
         {
             // Arrange
+            var orders = new List<Order>();
+            var testOrder = TestDataGenerator.GenerateOrder();
+            orders.Add(testOrder);
+
+            _orderAggregateMock.SetupItemQueryIteratorMock(orders);
+            _orderAggregateMock.SetupItemQueryIteratorMock(new List<int> { 1 });
 
             // Act
+            var response = await _sut.GetAllOrdersByCustomerId(testOrder.CustomerId);
 
             // Assert
+            foreach (var order in orders)
+            {
+                Assert.Equal(testOrder.CustomerId, order.CustomerId);
+            }
         }
 
         [Fact]
         public async Task FireDeleteItemAsync()
         {
             // Arrange
+            var testOrder = TestDataGenerator.GenerateOrder();
+
+            _orderAggregateMock.SetupDeleteItemAsync<Order>();
 
             // Act
+            await _sut.DeleteOrder(testOrder.CustomerId, testOrder.OrderId);
 
             // Assert
+            _orderAggregateMock.Verify(c => c.DeleteItemAsync<Order>(
+                It.IsAny<string>(),
+                It.IsAny<PartitionKey>(),
+                It.IsAny<ItemRequestOptions>(),
+                It.IsAny<CancellationToken>()), Times.Once);
         }
     }
 }

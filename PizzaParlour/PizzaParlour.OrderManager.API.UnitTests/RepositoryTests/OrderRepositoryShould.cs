@@ -1,10 +1,15 @@
 ﻿using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 using Moq;
+using PizzaParlour.Core.Models;
 using PizzaParlour.OrderManager.API.Repositories;
+using PizzaParlour.OrderManager.API.UnitTests.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
 
 namespace PizzaParlour.OrderManager.API.UnitTests.RepositoryTests
 {
@@ -28,6 +33,25 @@ namespace PizzaParlour.OrderManager.API.UnitTests.RepositoryTests
             _sut = new OrderRepository(
                 _cosmosClientMock.Object,
                 _configMock.Object);
+        }
+
+        [Fact]
+        public async Task FireCreateItemAsync()
+        {
+            // Arrange
+            var testOrder = TestDataGenerator.GenerateOrder();
+
+            _orderContainerMock.SetupCreateItemAsync<Order>();
+
+            // Act
+            await _sut.AddOrder(testOrder);
+
+            // Assert
+            _orderContainerMock.Verify(o => o.CreateItemAsync(
+                It.IsAny<Order>(),
+                It.IsAny<PartitionKey>(),
+                It.IsAny<ItemRequestOptions>(),
+                It.IsAny<CancellationToken>()), Times.Once);
         }
     }
 }
