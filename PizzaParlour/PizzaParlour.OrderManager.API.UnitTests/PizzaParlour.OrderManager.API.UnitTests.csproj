@@ -25,8 +25,4 @@
     <ProjectReference Include="..\PizzaParlour.OrderManager.API\PizzaParlour.OrderManager.API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="FunctionTests\" />
-  </ItemGroup>
-
 </Project>
